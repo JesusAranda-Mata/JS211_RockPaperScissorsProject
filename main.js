@@ -12,12 +12,64 @@ const rl = readline.createInterface({
 });
 
 // the function that will be called by the unit test below
+/**
+ * Write a function that will return
+ *  'Hand1 wins' if hand1 is the winning hand
+ *  'Hand1 wins' if hand1 is the winning hand
+ *  'It's a tie!' if it is a tie
+ * @param {string} hand1 - represents hand1's hand
+ * @param {string} hand2 - represents hand2's hand
+ * @returns an appropriate message let you know which player won
+ */
+
+// let paper = "paper"
+// let rock = "rock"
+// let scissors = "scissors"
+
 const rockPaperScissors = (hand1, hand2) => {
-
   // Write code here
-  // Use the unit test to see what is expected
-
+  if ((hand1 =='paper' && hand2 == 'rock') || (hand1 == 'rock' && hand2 == 'scissors') || (hand1 =='scissors'&& hand2 == 'paper')){
+    return "Hand one wins!"
+  }
+  else if ((hand1 == "rock" && hand2 == "paper") || (hand1 == 'paper' && hand2 == 'scissor') || (hand1 == 'scissors'&& hand2 == 'rock')){
+    return "Hand two wins!"
+  }
+  else {
+    return "It's a tie!"
+  }  
 }
+
+/*----
+const rockPaperScissors = (hand1, hand2) => {
+  // Write code here
+  if (hand1 == rock && hand2 == scissors){
+    return '0'
+  }
+  if (hand1 == paper && hand2 == rock){
+    return '1'
+  }
+  if ("scissors"&&"paper"){
+    return "Hand two wins!"
+  }
+  if (paper && scissors){
+    return '3'
+  }
+  if (rock && paper){
+    return '4'
+  }
+  if (hand1 == scissors && hand2 == rock){
+    return '5'
+  }
+}
+----*/
+
+rockPaperScissors()
+/*----- 
+ let results = rockPaperScissors()
+ console.log(results)
+-----*/
+
+  // Use the unit test to see what is expected
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
