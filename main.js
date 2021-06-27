@@ -22,24 +22,32 @@ const rl = readline.createInterface({
  * @returns an appropriate message let you know which player won
  */
 
-// let paper = "paper"
-// let rock = "rock"
-// let scissors = "scissors"
+let paper = "paper"
+let rock = "rock"
+let scissors = "scissors"
+
+paper.trim()
+rock.trim()
+scissors.trim()
 
 const rockPaperScissors = (hand1, hand2) => {
   // Write code here
-  if ((hand1 =='paper' && hand2 == 'rock') || (hand1 == 'rock' && hand2 == 'scissors') || (hand1 =='scissors'&& hand2 == 'paper')){
+  if ((hand1 == paper && hand2 == rock) || (hand1 == rock && hand2 == scissors) || (hand1 == scissors && hand2 == paper)){
     return "Hand one wins!"
   }
-  else if ((hand1 == "rock" && hand2 == "paper") || (hand1 == 'paper' && hand2 == 'scissor') || (hand1 == 'scissors'&& hand2 == 'rock')){
+  if ((hand1 == rock && hand2 == paper) || (hand1 == paper && hand2 == scissors) || (hand1 == scissors && hand2 ==  rock)){
     return "Hand two wins!"
   }
-  else {
+  if ((hand1 == rock && hand2 == rock) || (hand1 == paper && hand2 == paper) || (hand1 == scissors && hand2 == scissors)){ 
     return "It's a tie!"
+  } 
+  else {  
+    return "Learn the game!!!"
   }  
 }
 
 /*----
+//-----------This is my test code
 const rockPaperScissors = (hand1, hand2) => {
   // Write code here
   if (hand1 == rock && hand2 == scissors){
@@ -77,7 +85,7 @@ rockPaperScissors()
 function getPrompt() {
   rl.question('hand1: ', (answer1) => {
     rl.question('hand2: ', (answer2) => {
-      console.log( rockPaperScissors(answer1, answer2) );
+      console.log( rockPaperScissors(answer1, answer2));
       getPrompt();
     });
   });
