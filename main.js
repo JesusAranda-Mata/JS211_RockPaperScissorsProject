@@ -30,8 +30,11 @@ paper.trim()
 rock.trim()
 scissors.trim()
 
-const rockPaperScissors = (hand1, hand2) => {
+const rockPaperScissors = (h1, h2) => {
   // Write code here
+  let hand1 = h1.trim().toLowerCase();
+  let hand2 = h2.trim().toLowerCase();
+
   if ((hand1 == paper && hand2 == rock) || (hand1 == rock && hand2 == scissors) || (hand1 == scissors && hand2 == paper)){
     return "Hand one wins!"
   }
@@ -71,7 +74,6 @@ const rockPaperScissors = (hand1, hand2) => {
 }
 ----*/
 
-rockPaperScissors()
 /*----- 
  let results = rockPaperScissors()
  console.log(results)
